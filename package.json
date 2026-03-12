@@ -1,5 +1,5 @@
 {
-  "name": "flashnet-rewards-sdk",
+  "name": "@flashnet/rewards-sdk",
   "version": "0.1.0",
   "description": "Minimal TypeScript client for the Flashnet rewards API.",
   "type": "module",
@@ -24,6 +24,7 @@
     "test": "vitest run",
     "test:integration": "vitest run tests/integration",
     "clean": "rm -rf dist",
+    "publish:npm": "bun run clean && bun run check && bun run build && npm publish --access public",
     "prepublishOnly": "bun run build"
   },
   "keywords": [
