@@ -1,0 +1,44 @@
+{
+  "name": "flashnet-rewards-sdk",
+  "version": "0.1.0",
+  "description": "Minimal TypeScript client for the Flashnet rewards API.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "browser": "./dist/index.js",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.check.json",
+    "test": "vitest run",
+    "test:integration": "vitest run tests/integration",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "rewards",
+    "flashnet",
+    "sdk"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@noble/hashes": "^2.0.1",
+    "@noble/secp256k1": "^3.0.0",
+    "@types/node": "^25.5.0",
+    "typescript": "^5.8.2",
+    "vitest": "^4.1.0"
+  },
+  "dependencies": {}
+}
